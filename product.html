@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles/product-style.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "Yt0cOCKA-TSRPT2bN",
+            });
+        })();
+    </script>
+    <script src="scripts/handleEmails.js"></script>
+</head>
+<body>
+    <section class="success-window">
+        <h1>Your form has been sent <span style="color: #2dd4bf; margin-left: 0.5vw;">✔</span></h1>
+        <p>
+            One of our developers will contact you shortly. A 50% upfront payment 
+            will be required before the project begins. Once the project is completed, 
+            you will be asked to pay the remaining 50%, and the final project files 
+            will be delivered to you via email.<br>
+        </p>
+    </section>
+    <section class="root">
+        <section class="product"></section>
+        <section class="contact-form">
+            <header>
+                <h1>Please fill out the form below:</h1>
+                <p>One of our developers will conntact you shortly</p>
+            </header>
+            
+                <div class="input-item">
+                    <p class="input-item-name">Name: </p>
+                    <input id="user-name" type="text">
+                </div>
+                <div class="input-item">
+                    <p class="input-item-name">Email: </p>
+                    <input id="user-email" type="text">
+                </div>
+                <div class="input-item">
+                    <p class="input-item-name">Phone: </p>
+                    <input id="user-phone" type="text">
+                </div>
+                <div class="question">
+                    <label><input type="radio" name="contact-method" value="telegram">Telegram</label>
+                    <label><input type="radio" name="contact-method" value="whatsapp">WhatsApp</label>
+                    <label><input type="radio" name="contact-method" value="skype">Skype</label>
+                </div>
+                <div class="inputs-bottom">
+                    <p>Please describe your project in details:</p>
+                    <textarea class="bottom-input" placeholder=""></textarea>
+                </div>
+
+                <button onclick="sendForm()">Send Form</button>
+            </div>
+        </section>
+    </section>
+    <script src="scripts/renderProduct.js"></script>
+    <script src="scripts/data.js"></script>
+</body>
+</html>

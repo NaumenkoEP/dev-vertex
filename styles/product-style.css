@@ -1,0 +1,148 @@
+html, body {
+    font-family: Arial;
+    background-color:  #101827;
+    position: relative;
+}
+.root{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+    margin-top: 5vh;
+}
+.product{
+    background-color: #1f2937;
+    border-radius: 10px;
+    padding: 3vh 2vw;
+    text-align: center;
+    font-size: 2.5vh;
+    font-weight: bold;
+    width: 30vw;
+
+    border: 2px solid #2dd4bf;
+}
+.product h1 {
+    color: #2dd4bf;
+    font-size: 7vh;
+    margin: 1vh 0;
+}
+.product p {
+    color:  #979faa;
+    text-align: center;
+    margin-bottom: 2vh;
+    font-size: 2vh;
+}
+.product div {
+    text-align: left;
+    color: white;
+    font-size: 2.5vh;
+    margin-top: 1vh;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.contact-form{
+    background-color: #1f2937;
+    border-radius: 10px;
+    padding: 3vh 2vw;
+    text-align: center;
+    font-size: 2.5vh;
+    font-weight: bold;
+    width: 30vw;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3vh;
+}
+header h1{
+    color: #2dd4bf;
+    font-size: 3vh;
+}
+header p{
+    color:  #979faa;
+    font-size: 2vh;
+}
+.contact-form button{
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 2.5vh;
+    background-color: #2dd4bf;
+    border: none;
+    color: white;
+    transition: 0.3s;
+}
+.contact-form button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+
+.input-item{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: vw;
+}
+.input-item p {
+    margin: 0;
+    font-size: 2.5vh;
+    color: white;
+}
+.input-item input{
+    width: 73.5%;
+    border-radius: 5px;
+    font-size: 2.5vh;
+}
+.question{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+label{
+    color: white;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.inputs-bottom{
+    font-size: 2.5vh;
+    color: white;
+}
+.bottom-input{
+    width: 99%;
+    min-width: 99%;
+    max-width: 99%;
+    height: 23vh;
+    font-size: 1vw;
+    border-radius: 5px;
+    font-family: Arial;
+}
+.success-window{
+    display: none;
+    flex-flow: column nowrap;
+    background-color: #1f2937;
+    border-radius: 10px;
+    padding-bottom: 3vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    width: 40vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #2dd4bf;
+}
+.success-window h1{
+    font-size: 4.5vh;
+    color: white;
+}
+.success-window p {
+    font-size: 2.5vh;
+    margin: 0;
+    color: #979faa;
+}

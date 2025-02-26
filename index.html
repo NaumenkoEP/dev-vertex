@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Vertex</title>
+    <link rel="stylesheet" href="styles/main-style.css">
+</head>
+<body>
+    <header id="header">
+        
+        <h1 id="site-title"></h1>
+        <nav>
+            <a href="#about" id="nav-about"></a>
+            <a href="#products" id="nav-products"></a>
+            <a href="#contact" id="nav-contact"></a>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-text">
+            <h1><span id="hero-title-white"></span> <span id="hero-title-main"></span></h1>
+            <p id="hero-subtitle"></p>
+        </div>
+        <div class="hero-buttons">
+            <button onclick="window.location.href='#products'" class="hero-button-getStarted" id="btn-get-started"></button>
+            <button onclick="window.location.href='#about'" class="hero-button-learnMore" id="btn-learn-more"></button>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="about-top">
+            <article class="about-card">
+                <h1 id="about-title-1"></h1>
+                <p id="about-text-1"></p>
+            </article>
+
+            <article class="about-card">
+                <h1 id="about-title-2"></h1>
+                <p id="about-text-2"></p>
+            </article>
+        </div>
+        <div class="about-bottom">
+            <article class="record-card">
+                <h1 id="records-title"></h1>
+                <p id="records-text"></p>
+            </article>
+        </div>
+    </section>
+    <section id="products" class="products">
+        <div class="products-header">
+            <span class="products-outline"></span><h1 id="products-title"></h1><span class="products-outline"></span>
+        </div>
+        <div class="products-grid" id="products-grid"></div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-header">
+            <h1></h1>
+            <p></p>
+        </div>
+        <section class="contact-cards">
+            <div class="contact-card contact-card1"></div>
+            <div class="contact-card contact-card2"></div>
+        </section>
+    </section>
+    <footer id="contact">
+        <p>&copy; 2025 Dev Vertex - All Rights Reserved</p>
+    </footer>
+    <script src="scripts/renderMain.js"></script>
+    <script src="scripts/data.js"></script>
+</body>
+</html>
