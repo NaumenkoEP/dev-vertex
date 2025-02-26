@@ -1,9 +1,12 @@
 html, body {
     font-family: Arial;
-    background-color:  #101827;
+    background-color: #101827;
     position: relative;
+    margin: 0;
+    padding: 0;
 }
-.root{
+
+.root {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -11,7 +14,10 @@ html, body {
     gap: 3vw;
     margin-top: 5vh;
 }
-.product{
+
+.product {
+    display: flex;
+    flex-flow: column wrap;
     background-color: #1f2937;
     border-radius: 10px;
     padding: 3vh 2vw;
@@ -19,20 +25,22 @@ html, body {
     font-size: 2.5vh;
     font-weight: bold;
     width: 30vw;
-
     border: 2px solid #2dd4bf;
 }
+
 .product h1 {
     color: #2dd4bf;
     font-size: 7vh;
     margin: 1vh 0;
 }
+
 .product p {
-    color:  #979faa;
+    color: #979faa;
     text-align: center;
     margin-bottom: 2vh;
     font-size: 2vh;
 }
+
 .product div {
     text-align: left;
     color: white;
@@ -42,7 +50,7 @@ html, body {
     text-align: center;
 }
 
-.contact-form{
+.contact-form {
     background-color: #1f2937;
     border-radius: 10px;
     padding: 3vh 2vw;
@@ -54,15 +62,18 @@ html, body {
     flex-flow: column nowrap;
     gap: 3vh;
 }
-header h1{
+
+header h1 {
     color: #2dd4bf;
     font-size: 3vh;
 }
-header p{
-    color:  #979faa;
+
+header p {
+    color: #979faa;
     font-size: 2vh;
 }
-.contact-form button{
+
+.contact-form button {
     border-radius: 5px;
     padding: 10px;
     width: 100%;
@@ -72,45 +83,50 @@ header p{
     color: white;
     transition: 0.3s;
 }
+
 .contact-form button:hover {
     transform: scale(1.05);
     opacity: 0.9;
 }
 
-
-.input-item{
+.input-item {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    gap: vw;
+    gap: 1vw;
 }
+
 .input-item p {
     margin: 0;
     font-size: 2.5vh;
     color: white;
 }
-.input-item input{
+
+.input-item input {
     width: 73.5%;
     border-radius: 5px;
     font-size: 2.5vh;
 }
-.question{
+
+.question {
     display: flex;
     justify-content: space-around;
     flex-flow: row wrap;
 }
-label{
+
+label {
     color: white;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
 }
 
-.inputs-bottom{
+.inputs-bottom {
     font-size: 2.5vh;
     color: white;
 }
-.bottom-input{
+
+.bottom-input {
     width: 99%;
     min-width: 99%;
     max-width: 99%;
@@ -119,7 +135,8 @@ label{
     border-radius: 5px;
     font-family: Arial;
 }
-.success-window{
+
+.success-window {
     display: none;
     flex-flow: column nowrap;
     background-color: #1f2937;
@@ -137,12 +154,103 @@ label{
     transform: translate(-50%, -50%);
     border: 2px solid #2dd4bf;
 }
-.success-window h1{
+
+.success-window h1 {
     font-size: 4.5vh;
     color: white;
 }
+
 .success-window p {
     font-size: 2.5vh;
     margin: 0;
     color: #979faa;
+}
+
+/* Media Queries for Mobile Responsiveness */
+
+@media (max-width: 768px) {
+    .root {
+        flex-direction: column;
+        gap: 5vw;
+    }
+
+    .product, .contact-form {
+        width: 80vw;
+    }
+
+    .product h1 {
+        font-size: 10vw;
+    }
+
+    .product p, .product div {
+        font-size: 4vw;
+    }
+
+    .input-item {
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        gap: 2vw;
+    }
+
+    .input-item input {
+        width: 100%;
+    }
+
+    .question {
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .bottom-input {
+        height: 15vh;
+        font-size: 3vw;
+    }
+
+    .contact-form button {
+        font-size: 4vw;
+    }
+
+    .inputs-bottom p {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 480px) {
+    html, body {
+        font-size: 14px;
+    }
+
+    .product h1 {
+        font-size: 12vw;
+    }
+
+    .product p {
+        font-size: 5vw;
+    }
+
+    .input-item p {
+        font-size: 4.5vw;
+    }
+
+    .input-item input {
+        font-size: 4.5vw;
+    }
+
+    .bottom-input {
+        height: 15vh;
+        font-size: 4vw;
+    }
+
+    .success-window {
+        width: 80vw;
+        padding: 5vh 2vw;
+    }
+
+    .success-window h1 {
+        font-size: 6vw;
+    }
+
+    .success-window p {
+        font-size: 4vw;
+    }
 }
