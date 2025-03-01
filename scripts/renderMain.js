@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <p>info@devvertex.com</p>
     `;
 
-    handleNavMenu();
+    // handleNavMenu();
 });
 
 const redirectToProductPage = (productName) => {
@@ -159,4 +159,4 @@ const toggleNavMenu = () => {
         menuOpen = false;
     }
 };
-window.addEventListener("resize", handleNavMenu);
+// window.addEventListener("resize", handleNavMenu);
