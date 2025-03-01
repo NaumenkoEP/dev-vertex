@@ -131,7 +131,6 @@ window.addEventListener("resize", function(){
             document.querySelector("header").style.gap = "52vw"
         }
     } else if (window.innerWidth > 1500) {
-        console.log(window.innerWidth)
         document.querySelector("header div").innerHTML = `
             <nav>
                 <a href="#about" id="nav-about">Products</a>
@@ -145,9 +144,8 @@ window.addEventListener("resize", function(){
 });
 
 setInterval(function(){
-    console.log(window.innerWidth)
+    document.getElementById("site-title").innerText = window.innerWidth
 }, 100)
-
 
 let menuOpen = false;
 let mobileMenu = document.querySelector(".mobile-menu");
