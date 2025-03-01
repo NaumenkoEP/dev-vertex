@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
             Have any questions? Just send us an email, 
             and we will get back to you as soon as possible. 
         </p>
-        <p>info@devvertex.com</p>
+        <p>dev.vertex2025@gmail.com</p>
     `;
 
     handleNavMenu();
