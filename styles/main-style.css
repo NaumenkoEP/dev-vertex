@@ -84,13 +84,12 @@ header nav a:hover{
     text-align: center;
 }
 .hero-buttons{
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 .hero-buttons button{
     font-size: 3vh;
-    padding: 20px 30px;
+    padding: 3vh 3vw;
     border-radius: 10px;
     margin: 10px;
     border: none;
