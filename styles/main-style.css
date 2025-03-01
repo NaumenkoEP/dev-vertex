@@ -44,7 +44,6 @@ header nav a{
     text-decoration: none;
     color: var(--text-color);
     font-size: 2.5vh;
-    padding: 0.5vh 0.5vw;
     transition: 0.5s;
 }
 header nav a:hover{
