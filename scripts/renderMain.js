@@ -133,8 +133,8 @@ const redirectToProductPage = (productName) => {
     } else if (window.innerWidth > 1200) {
         document.querySelector("header div").innerHTML = `
             <nav>
-                <a href="#about" id="nav-about">Products</a>
-                <a href="#products" id="nav-products">About</a>
+                <a href="#products" id="nav-products">Products</a>
+                <a href="#about" id="nav-about">About</a>
                 <a href="#contact" id="nav-contact">Contact</a>
             </nav>
         `;
