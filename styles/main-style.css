@@ -24,11 +24,11 @@ header{
     background-color: var(--header-bg-color);
     position: fixed;
     width: 100%;  
-    height: 14vh;
+    /* height: 14vh; */
     z-index: 1000;
 }
 header h1{
-    font-size: 6vh;
+    font-size: 3vw;
     color: var(--main-color);
     margin-left: 2vw;
 }
@@ -137,7 +137,7 @@ header nav a:hover{
 .about-card{
     background-color: #1f2937;
     border-radius: 10px;
-    padding: 4vh 6vw;
+    padding: 4vh 5vw;
     width: 35vw;
     max-width: 550px;
     color: var(--text-color);
@@ -303,7 +303,7 @@ header nav a:hover{
     background-color: white;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     display: flex;
-    padding: 5vh 10vw;
+    padding: 5vh 5vw;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
@@ -334,36 +334,16 @@ footer{
 
 /* === Mobile Adjustments === */
 @media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px 0;
-    }
-
-    header h1 {
-        font-size: 4vh;
-        margin: 0;
-        text-align: center;
-    }
-
-    header nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    header nav a {
-        font-size: 2vh;
-        padding: 8px;
-        display: block;
-        text-align: center;
-    }
 
     .hero {
-        width: 90vw;
         height: auto;
         padding: 10vh 5vw;
         text-align: center;
+        width: 90vw;
     }
+   header h1 {
+        font-size: 5vw;
+   }
 
     .hero-text h1 {
         font-size: 7vh;
@@ -386,16 +366,6 @@ footer{
     .about-card, .record-card {
         width: 90%;
         max-width: none;
-        padding: 4vh 5vw;
-    }
-
-    .products-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        padding: 5vw;
-    }
-
-    .products-card {
-        width: 100%;
     }
 
     .contact-cards {
@@ -404,13 +374,43 @@ footer{
     }
 
     .contact-card {
-        padding: 5vh 5vw;
         width: 90%;
         text-align: center;
     }
 
     footer {
         text-align: center;
-        padding: 20px 10px;
+        padding: 2vh 1vw;
     }
+    .header-menu{
+        margin-top: 0;
+    }
+}
+
+.bars-button{
+    width: 8vw;
+    height: 8vw;
+    cursor: pointer;
+}
+.mobile-menu {
+    display: none;
+    width: 100%;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    gap: 2vh;
+    margin-top: 0;  
+    position: fixed; 
+    background-color: #1f2937;  
+    z-index: 1000; 
+    padding: 1vh;
+}
+.mobile-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 2.5vh;
+    transition: 0.5s;
+}
+.mobile-menu a:hover{
+    color: var(--main-color);
+    transform: scale(1.05);
 }
