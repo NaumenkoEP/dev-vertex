@@ -114,7 +114,7 @@ const redirectToProductPage = (productName) => {
 }
 
 window.addEventListener("resize", function(){
-    if (window.innerWidth <= 1500) {
+    if (window.innerWidth <= 1200) {
         document.querySelector("header div").innerHTML = `
             <img src='img/bars.png' class='bars-button'>
         `;
@@ -126,11 +126,11 @@ window.addEventListener("resize", function(){
         const headerHeight = window.getComputedStyle(header).height;
         mobileMenu.style.top = headerHeight;
         
-        if(window.innerWidth <= 1000){
+        if(window.innerWidth <= 800){
             document.querySelector("header").style.gridTemplateColumns = "30vw 18vw"
             document.querySelector("header").style.gap = "52vw"
         }
-    } else if (window.innerWidth > 1500) {
+    } else if (window.innerWidth > 1200) {
         document.querySelector("header div").innerHTML = `
             <nav>
                 <a href="#about" id="nav-about">Products</a>
@@ -143,9 +143,9 @@ window.addEventListener("resize", function(){
     }
 });
 
-setInterval(function(){
-    document.getElementById("site-title").innerText = window.innerWidth
-}, 100)
+// setInterval(function(){
+//     document.getElementById("site-title").innerText = window.innerWidth
+// }, 100)
 
 let menuOpen = false;
 let mobileMenu = document.querySelector(".mobile-menu");
