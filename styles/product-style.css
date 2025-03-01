@@ -198,6 +198,7 @@ label {
 
     .question {
         margin: 0;
+        gap: 0.5vw;
     }
 
     .bottom-input {
