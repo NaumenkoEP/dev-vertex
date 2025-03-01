@@ -131,6 +131,7 @@ window.addEventListener("resize", function(){
             document.querySelector("header").style.gap = "52vw"
         }
     } else if (window.innerWidth > 1500) {
+        console.log(window.innerWidth)
         document.querySelector("header div").innerHTML = `
             <nav>
                 <a href="#about" id="nav-about">Products</a>
