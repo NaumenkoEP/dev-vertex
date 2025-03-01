@@ -122,7 +122,6 @@ const handleNavMenu = () => {
         const header = document.querySelector("header");
         const mobileMenu = document.querySelector(".mobile-menu");
         const headerHeight = window.getComputedStyle(header).height;
-        console.log(headerHeight)
         mobileMenu.style.top = headerHeight;
         
         if(this.window.innerWidth <= 1000){
