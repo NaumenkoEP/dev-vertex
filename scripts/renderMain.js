@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <p>info@devvertex.com</p>
     `;
 
-    // handleNavMenu();
+    handleNavMenu();
 });
 
 const redirectToProductPage = (productName) => {
@@ -113,7 +113,7 @@ const redirectToProductPage = (productName) => {
     localStorage.setItem(productName, JSON.stringify(product));
 }
 
-window.addEventListener("resize", function(){
+ const handleNavMenu = () =>{
     if (window.innerWidth <= 1200) {
         document.querySelector("header div").innerHTML = `
             <img src='img/bars.png' class='bars-button'>
@@ -141,11 +141,8 @@ window.addEventListener("resize", function(){
         mobileMenu.style.display = "none"
         menuOpen = false;
     }
-});
+}
 
-// setInterval(function(){
-//     document.getElementById("site-title").innerText = window.innerWidth
-// }, 100)
 
 let menuOpen = false;
 let mobileMenu = document.querySelector(".mobile-menu");
@@ -159,3 +156,4 @@ const toggleNavMenu = () => {
     }
 };
 
+window.addEventListener("resize", handleNavMenu)
