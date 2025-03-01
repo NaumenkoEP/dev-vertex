@@ -362,6 +362,7 @@ footer{
     }
 
     .hero {
+        width: 90vw;
         height: auto;
         padding: 10vh 5vw;
         text-align: center;
