@@ -109,9 +109,9 @@ header p {
 }
 
 .question {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 3vw;
 }
 
 label {
@@ -193,7 +193,7 @@ label {
     }
 
     .input-item input {
-        width: 95%;
+        width: 94%;
     }
 
     .question {
