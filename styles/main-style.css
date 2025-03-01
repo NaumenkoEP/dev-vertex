@@ -118,7 +118,7 @@ header nav a:hover{
     align-items: center;
     flex-flow: column nowrap;
     background-color: var(--about-bg-color);
-    padding-top: 15vh;
+    padding-top: 17vh;
 
 }
 .about-top{
@@ -189,7 +189,7 @@ header nav a:hover{
     background-color: var(--about-bg-color);
     padding: 5vh 2vw;
     text-align: center;
-    padding-top: 10vh;
+    padding-top: 12vh;
 }
 .products-header {
     display: flex;
