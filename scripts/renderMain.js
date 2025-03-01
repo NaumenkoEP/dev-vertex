@@ -142,7 +142,14 @@ const handleNavMenu = () => {
 }
 
 window.addEventListener("resize", handleNavMenu);
-document.addEventListener("DOMContentLoaded", handleNavMenu);
+document.addEventListener("DOMContentLoaded", () => {
+    handleNavMenu();
+    console.log("Window loaded, checking for correct nav settings.");
+});
+
+setInterval(function(){
+    console.log(window.innerWidth)
+}, 100)
 
 
 let menuOpen = false;
