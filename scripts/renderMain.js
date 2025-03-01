@@ -113,25 +113,25 @@ const redirectToProductPage = (productName) => {
     localStorage.setItem(productName, JSON.stringify(product));
 }
 
-const handleNavMenu = () => {
-    if (this.window.innerWidth <= 1500) {
-        this.document.querySelector("header div").innerHTML = `
+window.addEventListener("resize", function(){
+    if (window.innerWidth <= 1500) {
+        document.querySelector("header div").innerHTML = `
             <img src='img/bars.png' class='bars-button'>
         `;
         document.querySelector(".bars-button").addEventListener("click", toggleNavMenu);
-        this.document.querySelector("header h1").style.textWrap = "nowrap"
+        document.querySelector("header h1").style.textWrap = "nowrap"
 
         const header = document.querySelector("header");
         const mobileMenu = document.querySelector(".mobile-menu");
         const headerHeight = window.getComputedStyle(header).height;
         mobileMenu.style.top = headerHeight;
         
-        if(this.window.innerWidth <= 1000){
-            this.document.querySelector("header").style.gridTemplateColumns = "30vw 18vw"
-            this.document.querySelector("header").style.gap = "52vw"
+        if(window.innerWidth <= 1000){
+            document.querySelector("header").style.gridTemplateColumns = "30vw 18vw"
+            document.querySelector("header").style.gap = "52vw"
         }
-    } else if (this.window.innerWidth > 1500) {
-        this.document.querySelector("header div").innerHTML = `
+    } else if (window.innerWidth > 1500) {
+        document.querySelector("header div").innerHTML = `
             <nav>
                 <a href="#about" id="nav-about">Products</a>
                 <a href="#products" id="nav-products">About</a>
@@ -141,7 +141,7 @@ const handleNavMenu = () => {
         mobileMenu.style.display = "none"
         menuOpen = false;
     }
-}
+});
 
 setInterval(function(){
     console.log(window.innerWidth)
@@ -159,4 +159,4 @@ const toggleNavMenu = () => {
         menuOpen = false;
     }
 };
-window.addEventListener("resize", handleNavMenu);
+
