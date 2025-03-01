@@ -159,4 +159,4 @@ const toggleNavMenu = () => {
         menuOpen = false;
     }
 };
-// window.addEventListener("resize", handleNavMenu);
+window.addEventListener("resize", handleNavMenu);
