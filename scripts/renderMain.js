@@ -110,3 +110,50 @@ const redirectToProductPage = (productName) => {
     localStorage.setItem("productGetter", JSON.stringify(productGetter))
     localStorage.setItem(productName, JSON.stringify(product));
 }
+
+const handleNavMenu = () => {
+    if (this.window.innerWidth <= 1500) {
+        this.document.querySelector("header div").innerHTML = `
+            <img src='img/bars.png' class='bars-button'>
+        `;
+        document.querySelector(".bars-button").addEventListener("click", toggleNavMenu);
+        this.document.querySelector("header h1").style.textWrap = "nowrap"
+
+        const header = document.querySelector("header");
+        const mobileMenu = document.querySelector(".mobile-menu");
+        const headerHeight = window.getComputedStyle(header).height;
+        console.log(headerHeight)
+        mobileMenu.style.top = headerHeight;
+        
+        if(this.window.innerWidth <= 1000){
+            this.document.querySelector("header").style.gridTemplateColumns = "30vw 18vw"
+            this.document.querySelector("header").style.gap = "52vw"
+        }
+    } else if (this.window.innerWidth > 1500) {
+        this.document.querySelector("header div").innerHTML = `
+            <nav>
+                <a href="#about" id="nav-about">Products</a>
+                <a href="#products" id="nav-products">About</a>
+                <a href="#contact" id="nav-contact">Contact</a>
+            </nav>
+        `;
+        mobileMenu.style.display = "none"
+        menuOpen = false;
+    }
+}
+
+window.addEventListener("resize", handleNavMenu);
+document.addEventListener("DOMContentLoaded", handleNavMenu);
+
+
+let menuOpen = false;
+let mobileMenu = document.querySelector(".mobile-menu");
+const toggleNavMenu = () => {
+    if (!menuOpen) {
+        mobileMenu.style.display = "flex";
+        menuOpen = true;
+    } else {
+        mobileMenu.style.display = "none";
+        menuOpen = false;
+    }
+};
