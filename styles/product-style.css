@@ -197,8 +197,7 @@ label {
     }
 
     .question {
-        flex-direction: column;
-        gap: 2vh;
+        margin: 0;
     }
 
     .bottom-input {
